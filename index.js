@@ -8,7 +8,7 @@ app.get('/', (req,res)=> res.send('Bot VoicePick con Codigo'));
 app.get('/codigo', (req,res)=> res.send('Tu codigo sale en los Logs de Render'));
 app.listen(PORT, ()=> console.log('Servidor en puerto '+PORT));
 
-const PHONE = process.env.PHONE_NUMBER || '51999999999'; // tu numero con 51 adelante
+const PHONE = process.env.PHONE_NUMBER;
 
 const client = new Client({
   authStrategy: new LocalAuth({ clientId: 'voicepick-codigo' }),
