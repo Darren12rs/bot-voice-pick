@@ -1,3 +1,9 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => res.send('Bot VoicePick esta vivo ✅ - Ve a Logs para ver el QR'));
+app.listen(PORT, () => console.log('Servidor en puerto ' + PORT));
+
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const axios = require('axios');
