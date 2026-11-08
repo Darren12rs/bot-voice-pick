@@ -23,7 +23,7 @@ const axios = require('axios');
 const FormData = require('form-data');
 
 const client = new Client({
-  authStrategy: new LocalAuth(),
+  authStrategy: new LocalAuth({ clientId: 'voicepick2' }),
   puppeteer: {
     headless: true,
     executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
